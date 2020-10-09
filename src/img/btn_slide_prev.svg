@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_slide_prev</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.5,29 C6.49187113,29 0,22.5081289 0,14.5 C0,6.49187113 6.49187113,0 14.5,0 C22.5081289,0 29,6.49187113 29,14.5 C29,22.5081289 22.5081289,29 14.5,29 Z M16.9808,20 L18,19.0627341 L13.0272,14.5 L18,9.92696629 L16.992,9 L11.5152,14.0365169 L11,14.5 L11.5152,14.9634831 L16.9808,20 Z" id="path-1"></path>
+        <filter x="-15.5%" y="-15.5%" width="131.0%" height="131.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.266666667   0 0 0 0 0.266666667   0 0 0 0 0.266666667  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="2018.08" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0-1.-홈" transform="translate(-27.000000, -238.000000)">
+            <g id="icon_slide_prev" transform="translate(30.000000, 241.000000)">
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill-opacity="0.6" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

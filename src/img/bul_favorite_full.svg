@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_fav_off</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mini-List-가게-(Liked)" transform="translate(-50.000000, -50.000000)" fill="#A0A0AB" fill-rule="nonzero">
+            <path d="M59,68 L58.7134765,67.7310756 C58.2634764,67.3087648 57.658789,66.8426296 56.9609375,66.3027888 C54.1888673,64.1593625 50,60.920319 50,55.75498 C50,52.5816733 52.2939452,50 55.1134765,50 C56.6216798,50 58.0332034,50.7430278 59,52.0179282 C59.9667971,50.7430278 61.3800783,50 62.8865235,50 C65.7060548,50 68,52.5816733 68,55.75498 C68,60.920319 63.8111327,64.1593625 61.0390625,66.3027888 C60.3394533,66.8426296 59.7365236,67.3087648 59.2865235,67.7310756 L59,68 Z" id="icon_fav_on"></path>
+        </g>
+    </g>
+</svg>
