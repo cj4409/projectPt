@@ -1,8 +1,8 @@
 import React from "react";
 import HeaderComp from "components/header";
 
-const headerCon = () => {
-  return <HeaderComp />;
+const headerCon = ({ ...props }) => {
+  return <HeaderComp {...props} />;
 };
 
 export default headerCon;

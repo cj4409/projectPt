@@ -4,7 +4,7 @@ import logo from "img/ci_logo.gif";
 import logoName from "img/ci_company_name.svg";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ fixedOn, ...props }) => {
   return (
     <HeaderWrap>
       <div className="topTitle">
@@ -14,7 +14,7 @@ const Header = () => {
         </Link>
         <span>로그인/가입</span>
       </div>
-      <div className="topMenu">
+      <div className={`topMenu ${fixedOn && "fixedOn"}`}>
         <Link to="/">시장</Link>
         <Link to="/">맛집</Link>
         <Link to="/">온라인</Link>
@@ -84,8 +84,20 @@ const HeaderWrap = styled.div`
   }
   & > .topMenu {
     max-width: 100%;
+    width: 100%;
     height: 42px;
     background: #1c79bc;
+
+    &.fixedOn {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 420px;
+      min-width: 320px;
+
+      z-index: 60;
+    }
 
     & > a {
       float: left;

@@ -22,7 +22,7 @@ for (let i = 0; i < todayStore.length; i++) {
   }
 }
 
-const Home = ({ stDt, znDt, filter, loadDt, setLoadDt, ...props }) => {
+const Home = ({ stDt, znDt, filter, loadDt, setLoadDt, fixedOn, ...props }) => {
   const [slideSt, setSlideSt] = useState(0);
   const [loading, setLoading] = useState(false);
   const [preAllDt, setPreAllDt] = useState(stDt);
@@ -68,7 +68,7 @@ const Home = ({ stDt, znDt, filter, loadDt, setLoadDt, ...props }) => {
   });
 
   return (
-    <HomeWrap>
+    <HomeWrap className={fixedOn && "fixedOn"}>
       <div className="recommend">
         <h4>오늘의 추천 가게</h4>
         <div className="slideWrap">
@@ -291,6 +291,11 @@ const Home = ({ stDt, znDt, filter, loadDt, setLoadDt, ...props }) => {
 
 const HomeWrap = styled.div`
   background: #f1f2f3;
+
+  &.fixedOn {
+    margin-top: ${42 + 42 + 34 + 41}px;
+  }
+
   h4 {
     padding: 20px 0px 10px;
 
@@ -617,7 +622,6 @@ const HomeWrap = styled.div`
                 &.red {
                   background: #ec7387;
                 }
-
               }
             }
             & > img {

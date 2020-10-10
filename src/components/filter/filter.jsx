@@ -10,6 +10,7 @@ const Filter = ({
   setSearch,
   setSort,
   setZone,
+  fixedOn,
   ...props
 }) => {
   const [ftNum, setFtNum] = useState(0);
@@ -24,7 +25,7 @@ const Filter = ({
   };
 
   return (
-    <FilterWrap>
+    <FilterWrap className={fixedOn && "fixedOn"}>
       <div className="filter3">
         <div
           onClick={() => {
@@ -189,6 +190,19 @@ const Filter = ({
 const FilterWrap = styled.div`
   box-shadow: 0 1px 0 0 rgba(204, 204, 204, 0.5);
   background: #fff;
+
+  &.fixedOn {
+    position: fixed;
+    top: ${42 + 42}px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 420px;
+    min-width: 320px;
+
+    z-index: 50;
+  }
 
   & > .filter3 {
     width: 100%;

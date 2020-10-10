@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Header from "containers/headerCon";
 import RollingBanner from "containers/rollingBannerCon";
@@ -11,11 +11,29 @@ const Home = () => {
   const [sort, setSort] = useState("기본 순");
   const [loadDt, setLoadDt] = useState(1);
   const [search, setSearch] = useState("");
+  const [fixedOn, setFixedOn] = useState(false);
+
+  useEffect(() => {
+    const scrollCheck = setInterval(() => {
+      if (!fixedOn) {
+        if (window.scrollY > 50) {
+          setFixedOn(true);
+          console.log(fixedOn);
+        }
+      } else if (window.scrollY <= 50) {
+        console.log(fixedOn);
+        setFixedOn(false);
+      }
+    }, 30);
+    return () => {
+      clearInterval(scrollCheck);
+    };
+  });
 
   return (
     <Wrap>
-      <Header />
-      <RollingBanner />
+      <Header fixedOn={fixedOn} />
+      <RollingBanner fixedOn={fixedOn} />
       <Filter
         setZone={setZone}
         setItem={setItem}
@@ -23,10 +41,12 @@ const Home = () => {
         setSearch={setSearch}
         setLoadDt={setLoadDt}
         filter={{ zone: zone, item: item, sort: sort, search: search }}
+        fixedOn={fixedOn}
       />
       <HomeContainer
         filter={{ zone: zone, item: item, sort: sort, search: search }}
         loadDt={loadDt}
+        fixedOn={fixedOn}
         setLoadDt={setLoadDt}
       />
     </Wrap>

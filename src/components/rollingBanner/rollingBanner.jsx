@@ -4,7 +4,7 @@ import downArr from "img/bul_arrow_down_white.svg";
 import upArr from "img/bul_arrow_up_white.svg";
 import rbData from "json/bannerData";
 
-const RollingBanner = () => {
+const RollingBanner = ({ fixedOn }) => {
   const [baNum, setBaNum] = useState(0);
   const [expand, setExpand] = useState(false);
   useEffect(() => {
@@ -20,7 +20,7 @@ const RollingBanner = () => {
   });
 
   return (
-    <RollingBannerWrap>
+    <RollingBannerWrap className={fixedOn && "fixedOn"}>
       <div className="text">
         <ul>
           <li>
@@ -65,6 +65,19 @@ const RollingBannerWrap = styled.div`
   background: #313841;
   height: 42px;
   z-index: 20;
+
+  &.fixedOn {
+    position: fixed;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 420px;
+    min-width: 320px;
+
+    z-index: 50;
+  }
 
   & > .text {
     position: relative;

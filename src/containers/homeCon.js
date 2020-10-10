@@ -4,7 +4,7 @@ import HomeComp from "components/home";
 import stDt from "json/storeData";
 import znDt from "json/zoneData";
 
-const HomeCon = ({ filter, loadDt, setLoadDt }) => {
+const HomeCon = ({ filter, loadDt, setLoadDt, fixedOn }) => {
   return (
     <HomeComp
       filter={filter}
@@ -12,6 +12,7 @@ const HomeCon = ({ filter, loadDt, setLoadDt }) => {
       znDt={znDt}
       loadDt={loadDt}
       setLoadDt={setLoadDt}
+      fixedOn={fixedOn}
     />
   );
 };
