@@ -130,10 +130,10 @@ const Home = ({ stDt, znDt, filter, loadDt, setLoadDt, ...props }) => {
                       <div>
                         <ul>
                           {val.tags.indexOf("today-price") !== -1 && (
-                            <li style={{ background: "#80DB35" }}>오늘시세</li>
+                            <li className="green">오늘시세</li>
                           )}
                           {val.tags.indexOf("today-price") === -1 && (
-                            <li style={{ background: "#EC7387" }}>전일시세</li>
+                            <li className="red">전일시세</li>
                           )}
                           {val.tags.indexOf("day-delivery") !== -1 && (
                             <li>당일배송</li>
@@ -610,6 +610,14 @@ const HomeWrap = styled.div`
                 color: #ffffff;
                 letter-spacing: -0.5px;
                 font-weight: normal;
+
+                &.green {
+                  background: #80db35;
+                }
+                &.red {
+                  background: #ec7387;
+                }
+
               }
             }
             & > img {
