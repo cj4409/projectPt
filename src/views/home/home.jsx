@@ -16,11 +16,11 @@ const Home = () => {
   useEffect(() => {
     const scrollCheck = setInterval(() => {
       if (!fixedOn) {
-        if (window.scrollY > 50) {
+        if (window.scrollY >= 50) {
           setFixedOn(true);
           console.log(fixedOn);
         }
-      } else if (window.scrollY <= 50) {
+      } else if (window.scrollY < 50) {
         console.log(fixedOn);
         setFixedOn(false);
       }
