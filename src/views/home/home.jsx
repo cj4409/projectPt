@@ -24,7 +24,7 @@ const Home = () => {
         console.log(fixedOn);
         setFixedOn(false);
       }
-    }, 30);
+    }, 15);
     return () => {
       clearInterval(scrollCheck);
     };
