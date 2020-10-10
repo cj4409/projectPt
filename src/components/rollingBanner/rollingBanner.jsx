@@ -76,7 +76,7 @@ const RollingBannerWrap = styled.div`
     max-width: 420px;
     min-width: 320px;
 
-    z-index: 50;
+    z-index: 80;
   }
 
   & > .text {
